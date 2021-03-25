@@ -1,0 +1,47 @@
+﻿Column,Description
+DatasetID,Auto-incremented integer representing the row number in the dataset.
+PlantedCropID,Identifier for the crop planted on a land parcel.
+BinID,Integer identifier for the storage bin
+isIssue,"boolean; 1 = raw product assoicated with this bin, source field, and load-in date was flagged by LW as having a wetness, leaking, or rot condition."
+USDAInspectionIdentifier,LW USDA Inspection number associated with raw product stored in bin (associated with a specific source field and delivery (e.g. harvested) date.
+Variety,Potato variety name
+BinName,"Alphanumeric code for bin; first three alpha letters denote a storage complex, last two digits indicate specific bins."
+Farm,Farm name
+FieldName,Casual field name
+FieldNumber,Field number 
+DeliveryDate,"""Delivery Date"" is derived from USDA grading; understood to be synonymous with date the raw product was harvested from source field."
+LWRockRating,"Darwin Lake/LambWestonRDO categorical value for rating rockiness/clumps 1 = clean, 3 = borderline, 5 = rocky."
+AvgSeedPlantingDepth,Average seed depth observed during stand counts.
+PotatoDays,Potato physiological days; similar to Growing Degree Days
+StemEndSucrose,Average stem-end sucrose g/l from September 2020 sugar lab testing
+StemEndGlucose,Average stem-end glucose g/l from September 2020 sugar lab testing.
+RevisedStemEndSucrose,Average stem-end sucrose g/l from all sucrose testing September 2020.
+RevisedStemEndGlucose,Average stem-end glucose g/l from all glucose testing in September 2020.
+SixOzPercent,6 oz. % from USDA grading
+Dirt,Dirt % from USDA grading
+SoftRotPercent,Soft Rot % from USDA grading
+PinkEyePercent,Pink Eye % from USDA grading
+SunburnPercent,Sunburn / greening % from USDA grading
+UndersizePercent,Undersize % from USDA grading
+SpecificGravity,Specific gravity from USDA grading
+InfiltrationRateInchesPerHour,A weighted average of infiltration rates (i.e. saturated hydraulic conductivity testing (Ksat)) converted to inches per hour for all soil types related to planted crop. Information derived from https://websoilsurvey.sc.egov.usda.gov/app/WebSoilSurvey.aspx using planted crop shapefiles.
+StDevFieldElevationFeet,"Estimated standard deviation of field elevations of planted crop. Using John Deere equipment & sensor data, planted crop acres are disaggregated into several elevation ranges. The standard deviation is calculated after applying sampling techniques to build an elevation profile of the land parcel."
+DayDiff_VineKillToHarvest,"Days between a vine kill and the first harvest date; if the field was not vine killed, then the value is -1."
+Rainall_HalfInch_Count,A count of occurrences of daily rainfall totals estimated to be 0.5 inches or greater. Rainfall totals are retrieved from subscription. Rainfall totals are estimated and derived from known locations and analysis of radar signatures.
+OneInchRainfallCount,A count of occurrences of daily rainfall totals estimated to be 1 inch or greater. Rainfall totals are retrieved from subscription. Rainfall totals are estimated and derived from known locations and analysis of radar signatures.
+MaxDailyRainfallInches,The max daily rainfall total during the growing season.
+RainfallVsCanopyImpact,A calculated value which was engineered as a potential independent variable to use in explaining sunburn/greening and storage failures. The calculation uses interpolated daily canopy ground cover percentages and daily rainfall totals and intends to quanity the impact a large rain event might have on the cultivated hill. The calucation is (1-CanopyPercentage) * Daily Rainfall Inches.
+RainfallInchesPrev3DaysOfHarvest,Estimated total rainfall inches in the 3 days prior to harvest.
+Rainfall_TuberInit_to_VineKill,"Estimated total rainfall inches occuring between tuber initiation and vinekill. Where tuber initiation dates are not provided,we assume 6/15/2020. Where Vine Kill did not occurr, we assume 10 days prior to first harvest date."
+Rainfall_VineKill_to_Harvest,"Estimated total rainfall inches occurring between vine kill event and first date of harvest. Where vine kill event did not occur, then we assume 10 days prior to the harvest (Delivery Date)."
+PhostrolApplications,"Count of occurrences of the application of phosphoric acid chemicals (e.g. ""Phostrol"", etc.)"
+LoadingHoursUnder50,"The number of hours of loading time where tuber temps were less than 50 degrees; if no information was recorded, or if no temperatures were recorded in that range, then -1."
+LoadingHours50to60,"The number of hours of loading time where tuber temps were >= 50 and < 60 degrees; if no information was recorded, or if no temperatures were recorded in that range, then -1."
+LoadingHours60to65,"The number of hours of loading time where tuber temps were >= 60 and < 65 degrees; if no information was recorded, or if no temperatures were recorded in that range, then -1."
+LoadingHours65Plus,"The number of hours of loading time where tuber temps were >= 65;  if no information was recorded, or if no temperatures were recorded in that range, then -1."
+PileHeightFeet,Estimated pile height (in feet) of raw product in storage bin.
+isEvenPileTop,Boolen; 1 = LW evaluated the top of the pile to be level; 0 = pile top was deemed slightly or significantly uneven.
+CumulativeNegativePileTempDegreeDays,"The cumulative degrees, by day, when the daily average of (Return temp - PlenumTempF) was < 0"
+CumulativePositivePileTempDegreeDays,"The cumulative degrees, by day, when the daily average of (Return temp - PlenumTempF) was > 0"
+CumulativePercentPerDayFromMaxFanSpeed,"The cumulative percentage points, by day, where the average fan speed was less than full speed (e.g. 100 hz)"
+CumulativePercentPerDayFromMaxRelativeHumidity,"The cumulative percentage points, by day, where the average relative humidity was less than 100%."
